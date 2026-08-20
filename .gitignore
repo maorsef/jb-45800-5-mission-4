@@ -1,0 +1,23 @@
+# Archives
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Training artifacts (model.pt is committed for web inference)
+training_metrics.json
+
+# Temp download artifacts
+rps_raw/
+rps_test_raw/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

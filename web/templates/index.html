@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Classifier</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🪨 📄 ✂️ סיווג תמונות</h1>
+      <p>העלה תמונה של יד המציגה אבן, נייר או מספריים והמודל יחזיר תחזית.</p>
+    </header>
+
+    <section class="upload-section">
+      <label for="imageInput" class="upload-label">
+        <span id="uploadText">לחץ לבחירת תמונה או גרור לכאן</span>
+        <input type="file" id="imageInput" accept="image/*" hidden>
+      </label>
+      <div id="previewArea" class="preview hidden">
+        <img id="previewImage" alt="תצוגה מקדימה">
+      </div>
+      <button id="predictBtn" class="btn" disabled>חזה</button>
+    </section>
+
+    <section id="resultSection" class="result hidden">
+      <h2>תוצאה</h2>
+      <div id="predictionBadge" class="badge"></div>
+      <p id="confidenceText"></p>
+      <div id="probBars" class="prob-bars"></div>
+    </section>
+
+    <section id="errorSection" class="error hidden"></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
